@@ -48,7 +48,7 @@ phishData <-
         "context"=c(sample(c(0,0.5,1), size=450, replace=T, prob=c(.9, .05, .05)),
                     sample(c(0,0.5,1), size=100, replace=T, prob=c(.05, .9, .05)),
                     sample(c(0,0.5,1), size=450, replace=T, prob=c(.05, .05, .9))),
-        "consciensciousness"=c(rnorm(n=500, mean=-1, sd=0.5),
+        "conscientiousness"=c(rnorm(n=500, mean=-1, sd=0.5),
                                rnorm(n=500, mean=1, sd=0.5)),
         "anxiety"=c(rnorm(n=500, mean=-0.75, sd=0.75),
                     rnorm(n=500, mean=0.75, sd=0.75)),
@@ -72,10 +72,10 @@ phishData <-
 
 
 # Build the linear models
-lm.judgment <- lm(judgment ~ context + consciensciousness +anxiety + selfConsciousness + intellect + trust + cautiousness + agreeableness + gender + age + education + nYearsAtOrg + CareerPath + messageProperties, data=phishData);
+lm.judgment <- lm(judgment ~ context + conscientiousness +anxiety + selfConsciousness + intellect + trust + cautiousness + agreeableness + gender + age + education + nYearsAtOrg + CareerPath + messageProperties, data=phishData);
 summary(lm.judgment);
 
-lm.state <- lm(state ~ context + consciensciousness + anxiety + selfConsciousness + intellect + trust + cautiousness + agreeableness + gender + age + education + nYearsAtOrg + CareerPath + messageProperties, data=phishData);
+lm.state <- lm(state ~ context + conscientiousness + anxiety + selfConsciousness + intellect + trust + cautiousness + agreeableness + gender + age + education + nYearsAtOrg + CareerPath + messageProperties, data=phishData);
 summary(lm.state);
 
 # Get the model coefficients
