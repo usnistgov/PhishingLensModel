@@ -6,6 +6,8 @@ A# Author: Frank Tamborello
 #
 # This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #
+# THE SOFTWARE IS PROVIDED 'AS IS' WITHOUT ANY WARRANTY OF ANY KIND, EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTY THAT THE SOFTWARE WILL CONFORM TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND FREEDOM FROM INFRINGEMENT, AND ANY WARRANTY THAT THE DOCUMENTATION WILL CONFORM TO THE SOFTWARE, OR ANY WARRANTY THAT THE SOFTWARE WILL BE ERROR FREE. IN NO EVENT SHALL NIST BE LIABLE FOR ANY DAMAGES, INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF, RESULTING FROM, OR IN ANY WAY CONNECTED WITH THIS SOFTWARE, WHETHER OR NOT BASED UPON WARRANTY, CONTRACT, TORT, OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY PERSONS OR PROPERTY OR OTHERWISE, AND WHETHER OR NOT LOSS WAS SUSTAINED FROM, OR AROSE OUT OF THE RESULTS OF, OR USE OF, THE SOFTWARE OR SERVICES PROVIDED HEREUNDER.
+# 
 # Description: Hypothetical Brunswickian Lens model of phishing attackee decision-making behavior highlighting personality factors
 #
 # Acknowledgment: This research is sponsored by Measurement Science and Engineering grant 70NANB15H252 from the National Institute of Standards and Technology (NIST). Special acknowledgements are due to Drs. Mary Theofanos and Kristen K. Greene of NIST's Information Technology Laboratory.
@@ -39,8 +41,10 @@ A# Author: Frank Tamborello
 # Execute this first, then linear models, then Lens model measures, to see a hypothetical effect of personality factors.
 phishData <-
     data.frame(
+        # 0: Reject phish message; 1: Respond to phish (ie succumb to attack)
         "judgment"=c(sample(c(0,1), size=500, replace=T, prob=c(.95, .05)),
                      sample(c(0, 1), size=500, replace=T, prob=c(.05, .95))),
+        # 0: Ham; 1: Phish
         "state"=c(sample(c(0,1), size=500, replace=T, prob=c(.95, .05)),
                   sample(c(0, 1), size=500, replace=T, prob=c(.05, .95))),
         "messageProperties"=c(rnorm(n=500, mean=0.5),
