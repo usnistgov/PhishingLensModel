@@ -10,7 +10,7 @@ A# Author: Frank Tamborello
 # 
 # Description: Hypothetical Brunswickian Lens model of phishing attackee decision-making behavior highlighting personality factors
 #
-# Acknowledgment: This research is sponsored by Measurement Science and Engineering grant 70NANB15H252 from the National Institute of Standards and Technology (NIST). Special acknowledgements are due to Drs. Mary Theofanos and Kristen K. Greene of NIST's Information Technology Laboratory.
+# Acknowledgment: This research is sponsored by Measurement Science and Engineering grant 70NANB15H252 from the National Institute of Standards and Technology (NIST). Special acknowledgements are due to Mary Theofanos and Kristen K. Greene of NIST's Information Technology Laboratory.
 #
 #
 # Revision 5
